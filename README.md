@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# Expense Tracker App 💸
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to my **Expense Tracker App**! This is my very first **React Native** application, built using **Expo** as part of my learning journey and tutorial practice. 
 
-## Get started
+The app is designed to help users manage their finances by tracking income, expenses, and multiple wallets in real-time.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Key Features
 
-2. Start the app
+* **User Authentication:** Secure email and password registration & login powered by **Firebase Auth**.
+* **Wallet Management:** Create and customize multiple wallets (e.g., Cash, Card, Salary) to keep balances separated. It automatically aggregates total income and total expenses.
+* **Transaction Tracking:** Add, modify, or delete income and expense transactions. Supports adding descriptions, categories, and uploading receipts/images.
+* **Dynamic Statistics (Weekly, Monthly, Yearly):** Visualizes financial data using beautiful dual-bar charts from `react-native-gifted-charts` for weekly, monthly, and yearly views. Shows all transactions related to the selected time filter.
+* **Instant Search Modal:** A dedicated search interface with a focus-on-open search bar. It performs instantaneous client-side filtering through all transactions by category, description, or type.
+* **Modern UI/UX:** Styled using custom dark-themed aesthetics, glassmorphism-inspired components, premium typography, and smooth micro-animations powered by `react-native-reanimated`.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🛠️ Technology Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* **Frontend Framework:** [React Native](https://reactnative.dev/) with [Expo (v54)](https://expo.dev/)
+* **Routing:** File-based routing via [Expo Router](https://docs.expo.dev/router/introduction/)
+* **Database & Authentication:** [Firebase Firestore](https://firebase.google.com/docs/firestore) & [Firebase Auth](https://firebase.google.com/docs/auth)
+* **Optimization & Performance:** [@shopify/flash-list](https://shopify.github.io/flash-list/) for highly-performant transaction list scrolling
+* **Charts & Analytics:** [React Native Gifted Charts](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts)
+* **Icons:** [Phosphor Icons (phosphor-react-native)](https://phosphoricons.com/)
+* **Image Hosting:** [Cloudinary](https://cloudinary.com/) (used for uploading transaction attachments)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## ⚙️ Getting Started
 
-When you're ready, run:
+Follow these steps to run the project locally:
 
+### 1. Prerequisites
+Ensure you have Node.js installed. You'll also need the Expo Go app on your phone (iOS/Android) or an emulator setup.
+
+### 2. Clone and Install Dependencies
 ```bash
-npm run reset-project
+# Install package dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 3. Setup Firebase
+The project relies on Firebase. You can find the configuration file at `config/firebase.ts`. Add your Firebase Web App credentials there:
+```typescript
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+```
 
-## Learn more
+### 4. Run the Dev Server
+```bash
+# Start the Expo development server
+npx expo start
+```
+* Scan the QR code with your Expo Go app, or press `a` for Android Emulator / `i` for iOS Simulator to run the project!
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🎓 My Learning & Reflections
+As my first React Native and Expo app, building this has helped me understand:
+1. **State Management & Context API:** Using React Context to handle global user authentication state.
+2. **File-based Routing:** Navigating between tab bars, stack screens, and modal presentations seamlessly.
+3. **Database Integration:** Performing CRUD operations on Firestore collections and setting up real-time sync listeners (`onSnapshot`).
+4. **Layout Constraints & Keyboard Resizing:** Handling native layout changes like keyboard avoidance and handling scrollable content behavior in modals.
