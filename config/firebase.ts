@@ -10,13 +10,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCV2eypibGq5SUaougb6lR80aNY_T6_6oc",
-  authDomain: "expence-tracker-app-4fb19.firebaseapp.com",
-  projectId: "expence-tracker-app-4fb19",
-  storageBucket: "expence-tracker-app-4fb19.firebasestorage.app",
-  messagingSenderId: "234140510271",
-  appId: "1:234140510271:web:23f0c2271698f663ce308a",
-  measurementId: "G-54EDDJHV27",
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 
 // Initialize Firebase
